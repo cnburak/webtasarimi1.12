@@ -1,0 +1,122 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="get-post" action="url" target="pencere"> 
+            <!-- method form verileri gönderilirken hangi HTTP yönteminin kullanılacağanı belirtir. -->
+            <!-- action form verilerinin nereye gönderileceğini belirtir. -->
+            <!-- target form verileri gönderildikten sonra yanıtın nerede görüntüleneceğini belirtir. -->
+            Kullanıcı adı:
+            <input type="text" name="kullaniciadi" size="15">
+            <br>
+            Şifre:
+            <input type="password" name="sifre" maxlength="15">
+            <!-- Hangi veri türünde girişin yapılacağını burada kullanılan type elemanı belirlemektedir. Type elemanının varsayılan değeri text olmakla -->
+            <!-- birlikte belirtilecek olan (text, password, checkbox, radio,submit, reset gibi) farklı değerleri de alabilir. -->
+            <!-- size metin kutusunun boyutunu (genişliğini) belirlemek için kullanılır. Varsayılan değeri 20’dir. -->
+            <!-- maxlength girilecek olan verinin en fazla kaç karakterden oluşacağını belirlemek için kullanılır. -->
+            <br>
+            Doğum günü:
+            <input type="date" name="dogumgunu" required>
+            <!-- Tarih formatında bilgi girmek için kullanılır. -->
+            <!-- required doldurulması zorunlu alan. -->
+            <br>
+            <input type="text" name="username" value="E-posta adresi:">
+            <!-- value TextBox’a varsayılan bir değer atanabilir. Sayfa ilk yüklendiğinde TextBox içinde görülen değerdir. -->
+            <!-- Kullanıcı değiştirmedikçe TextBox içinde bu değer kalır. -->
+            <br>
+            <input type="text" name="username" placeholder="E-posta adresi:">
+            <!-- placeholder TextBox’a varsayılan bir değer atanabilir. Sayfa ilk yüklendiğinde TextBox içinde görülen değerdir. -->
+            <!-- Kullanıcı yazmaya başladıkça TextBox içindeki değer silinir. -->
+            <br>
+            <input type="text" name="username" autofocus>
+            <!-- autofocus tanımlandığında sayfa yüklendikten sonra tanımlanan nesnenin odaklanacağını belirtir. -->
+            <br>
+            <textarea name="mesaj" cols="45" rows="6"> </textarea>
+            <!-- Daha geniş çaplı yazıları sayfalarımızda gösterebiliriz. Text elemanının genişletilmiş hali. -->
+            <br>
+            <textarea name="mesaj" cols="45" rows="6" readonly> Burada yazılanları sadece okuyabilirsiniz! </textarea>
+            <!-- readonly Textarea içindeki yazıların sadece okunabilir olması için. -->
+            <br>
+            <input type="checkbox"> a
+            <!-- Hazırlamakta olduğunuz forma onay kutuları eklemek için kullanılır. Onay kutuları, listelenen  -->
+            <!-- seçeneklerden istediğiniz kadarını seçebilmenize veya tümünü seçilmemiş duruma getirmenize olanak sağlar. -->
+            <br>
+            <input type="checkbox" checked> b
+            <!-- Checked özelliğini kullanarak sayfa yüklendiği zaman, seçili olmasını istediğiniz değer belirlenir. -->
+            <br>
+            <input type="radio" name="takim" value="1"> a
+            <br>
+            <input type="radio" name="takim" value="2" checked> b
+            <!-- Kullanıcının verilen seçeneklerden sadece bir tanesini seçebileceği durumlar için kullanılır. -->
+            <!-- Radio düğmelerinin birbirleri ile ilişkili olması ve name özelliklerinin aynı olması gerekmektedir. -->
+            <!-- checked özelliğini kullanarak sayfa yüklendiği zaman, seçili olmasını istediğiniz değer belirlenir. -->
+            <!-- Radio düğmelerinin alacağı değerler value seçeneğinde belirlenir. -->
+            <!-- name özelliklerinin aynı olmasına dikkat! -->
+            <br>
+            <select name="burc">
+                <option value="1"> a </option>
+                <option value="2"> b </option>
+                <option value="3"> c </option>
+            </select>
+            <!-- Form içinde açılır liste oluşturmak için kullanılır. Listeden tek eleman seçilebilir. -->
+            <!-- Açılan listeler select /select etiketi ile tanımlanır. Liste elemanları option /option etiketi ile tanımlanır. -->
+            <br>
+            <select name="burc" size="6">
+                <option value="1"> a </option>
+                <option value="2"> b </option>
+                <option value="3"> c </option>
+            </select>
+            <!-- a -->
+            <br>
+            <select>
+                <optgroup label="A">
+                    <option value="1"> a </option>
+                    <option value="2"> b </option>
+                    <option value="3"> c </option>
+                </optgroup>
+                <optgroup label="B">
+                    <option value="1"> d </option>
+                    <option value="2"> e </option>
+                    <option value="3"> f </option>
+                    </optgroup>
+            </select>
+            <!-- a -->
+            <fieldset>
+                <legend> A </legend>
+                <input type="checkbox" name="radAnswer" value="1"> a
+                <input type="checkbox" name="radAnswer" value="2"> b
+                <br>
+                <input type="checkbox" name="radAnswer" value="3"> c
+            </fieldset>
+            <!-- a -->
+            <input type="submit" value="Gönder">
+            <!-- Submit (gönder), form içerisinde yer alan içeriklerin sunucuya gönderilmesini sağlamak için kullanılır. -->
+            <!-- value özelliği düğme üzerinde istediğiniz metni yazmanıza olanak sağlar. -->
+            <br>
+            <input type="reset" value="Temizle">
+            <!-- Üzerine gelip tıklandığı zaman, form içeriğini temizleyip kullanıcının forma yeniden bilgi girişi sağlayan bir  -->
+            <!-- düğme (buton) oluşturulmasını sağlar. -->
+            <br>
+            <marquee direction=right> i </marquee>
+            <!-- Soldan sağa kayan yazı -->
+            <br>
+            <marquee> m </marquee>
+            <!-- Sağdan sola kayan yazı -->
+            <br>
+            <marquee behavior=alternate> k </marquee>
+            <!-- Sağdan sola ve soldan sağa kayan yazı -->
+            <br>
+            <marquee loop="1" direction="left"> Bilgisayar Programcılığı </marquee>
+            <!-- loop marquee etiketi içindeki yazının kaç defa kayacağını gösterir. -->
+            <br>
+            <marquee scrollamount="1" direction="down" scrolldelay="100"> Bilgisayar Programcılığı </marquee>
+            <!-- scrolldelay marquee etiketi içinde kaydırılan yazının her hareketinde bir önceki yerleştirildiği zaman ile sonraki -->
+            <!-- yerleştirileceği zaman arasındaki milisaniye cinsinden farkı belirler. (Varsayılan değer 85 ms.) -->
+            <br>
+            <marquee scrollamount="3" direction="down" scrolldelay="100"> Bilgisayar Programcılığı </marquee>
+            <!-- scrollamount marquee etiketi içinde kaydırılan yazının her hareketinde bir önceki yerleştirildiği konum ile yeni yerleştirileceği -->
+            <!-- konum arasındaki piksel cinsinden farkı belirler. (Varsayılan değer 6 pikseldir.) -->
+        </form>
+    </body>
+</html>
